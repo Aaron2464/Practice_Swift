@@ -22,8 +22,8 @@
                                     <constraint firstAttribute="height" constant="50" id="ecv-op-oEf"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-jZ-N24">
-                                <rect key="frame" x="182" y="278" width="50" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-jZ-N24">
+                                <rect key="frame" x="182" y="139.33333333333331" width="50" height="627.33333333333348"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-Ae-mgf">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -34,7 +34,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uax-rm-rb3">
-                                        <rect key="frame" x="0.0" y="150" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="288.66666666666663" width="50" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Qlc-wT-ELf"/>
@@ -42,7 +42,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ta-Hf-Ucf">
-                                        <rect key="frame" x="0.0" y="300" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="577.33333333333326" width="50" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="GVJ-1x-Jz4"/>
@@ -100,6 +100,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6eP-v9-afm" secondAttribute="trailing" constant="20" id="UW7-SW-TKG"/>
                             <constraint firstItem="oFy-jZ-N24" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZLb-uh-NJN"/>
                             <constraint firstItem="6eP-v9-afm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="aOM-72-kct"/>
+                            <constraint firstItem="oFy-jZ-N24" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="fLk-bk-r9R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zc6-jb-DeA" secondAttribute="trailing" constant="20" id="pVP-sm-c1t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
