@@ -268,7 +268,7 @@
                     </view>
                     <connections>
                         <outlet property="correctWordLabel" destination="8Ed-NB-lfT" id="wVS-6t-LDV"/>
-                        <outlet property="scoreLaabel" destination="oK6-rJ-shF" id="pyz-JA-bCy"/>
+                        <outlet property="scoreLabel" destination="oK6-rJ-shF" id="2ec-Du-3Bq"/>
                         <outlet property="treeImageView" destination="adG-He-MMQ" id="PF4-lT-fEU"/>
                         <outletCollection property="letterButton" destination="NnX-Sw-MPx" collectionClass="NSMutableArray" id="2FP-FB-mLA"/>
                         <outletCollection property="letterButton" destination="Lyd-ZP-XAE" collectionClass="NSMutableArray" id="9NN-zY-aze"/>
