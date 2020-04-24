@@ -32,7 +32,9 @@ class CityViewController: UIViewController {
 	}
   
   @objc func showWeatherDetails() {
-    
+    let detailVC = DetailViewController()
+    detailVC.city = city
+    navigationController?.pushViewController(detailVC, animated: true)
   }
 }
 
