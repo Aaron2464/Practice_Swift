@@ -13,6 +13,14 @@ class DetailViewController: UIViewController {
     let countryTitle: UILabel = {
         let title = UILabel()
         title.text = "Country"
+        title.font = title.font.withSize(20)
+        title.translatesAutoresizingMaskIntoConstraints = false
+        return title
+    }()
+    
+    let country: UILabel = {
+        let title = UILabel()
+        title.font = title.font.withSize(15)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
@@ -20,12 +28,14 @@ class DetailViewController: UIViewController {
     let cityTitle: UILabel = {
         let title = UILabel()
         title.text = "City"
+        title.font = title.font.withSize(20)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
     
     let place: UILabel = {
         let title = UILabel()
+        title.font = title.font.withSize(15)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
@@ -33,12 +43,14 @@ class DetailViewController: UIViewController {
     let tempTitle: UILabel = {
         let title = UILabel()
         title.text = "Tamperature"
+        title.font = title.font.withSize(20)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
     
     let temp: UILabel = {
         let title = UILabel()
+        title.font = title.font.withSize(15)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
@@ -46,12 +58,14 @@ class DetailViewController: UIViewController {
     let summaryTitle: UILabel = {
         let title = UILabel()
         title.text = "Summary"
+        title.font = title.font.withSize(20)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
     
     let summary: UILabel = {
         let title = UILabel()
+        title.font = title.font.withSize(15)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
@@ -60,16 +74,20 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.title = city.icon.uppercased()
-
+        
+        let image = NSTextAttachment()
+        image.image = UIImage(named: "icon-\(city.icon)")
+        country.attributedText = NSAttributedString(attachment: image)
         place.text = city.name
         temp.text = String(city.temp)
         summary.text = city.summary
         
-        let stackView = UIStackView(arrangedSubviews: [countryTitle, cityTitle, place, tempTitle, temp, summaryTitle, summary])
+        let stackView = UIStackView(arrangedSubviews: [countryTitle, country, cityTitle, place, tempTitle, temp, summaryTitle, summary])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.distribution = .equalSpacing
+        stackView.spacing = 20
+        stackView.distribution = .fillEqually
         stackView.backgroundColor = .black
         
         view.addSubview(stackView)
