@@ -93,18 +93,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7H-0t-z29">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="6Pw-L4-GdM" eventType="touchUpInside" id="Vf8-xq-5K3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz0-xF-2NH">
                                         <rect key="frame" x="0.0" y="50" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="6Pw-L4-GdM" eventType="touchUpInside" id="E1H-V4-Vyj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7o-Sf-Vy7">
                                         <rect key="frame" x="0.0" y="100" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="6Pw-L4-GdM" eventType="touchUpInside" id="ByG-dB-aRg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPh-TS-OIa">
                                         <rect key="frame" x="0.0" y="150" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="6Pw-L4-GdM" eventType="touchUpInside" id="ucy-AC-5R8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -122,6 +134,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8Z-HZ-eMd">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="multipleAnswerButtonPressed:" destination="6Pw-L4-GdM" eventType="valueChanged" id="FuA-9U-cqR"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -178,6 +193,9 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gGp-2z-Ypk">
                                         <rect key="frame" x="-2" y="0.0" width="378" height="31"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed:" destination="6Pw-L4-GdM" eventType="valueChanged" id="Age-Oq-30q"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7QB-k6-pdm">
                                         <rect key="frame" x="0.0" y="50" width="374" height="20.5"/>
@@ -233,6 +251,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="kW4-QS-Wru"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="z9T-e2-feq" id="bvA-ZD-can"/>
+                        <outlet property="multiLabel2" destination="Qyo-S5-tG0" id="1Al-c5-2xf"/>
+                        <outlet property="multiLabel3" destination="cnB-vh-om9" id="eSN-4B-2Qe"/>
+                        <outlet property="multiLabel4" destination="mTs-QL-V0L" id="Ke9-VR-GwF"/>
+                        <outlet property="multiSwitch1" destination="X8Z-HZ-eMd" id="RGj-5o-rCf"/>
+                        <outlet property="multiSwitch2" destination="ciI-uu-5AU" id="wVw-hd-YHA"/>
+                        <outlet property="multiSwitch3" destination="rhQ-Y7-Q1h" id="zyX-nc-UWZ"/>
+                        <outlet property="multiSwitch4" destination="gku-hE-u9y" id="vr3-Zo-VIF"/>
+                        <outlet property="multipleStackView" destination="fku-Gl-n6N" id="Add-t2-3Ni"/>
+                        <outlet property="questionLabel" destination="e5r-M3-5t6" id="otM-B4-nhA"/>
+                        <outlet property="questionProgressView" destination="dXJ-Ri-rvK" id="514-yh-4lH"/>
+                        <outlet property="rangedLabel1" destination="uND-nu-Hw6" id="fyE-SN-dqP"/>
+                        <outlet property="rangedLabel2" destination="X23-a8-cys" id="YAY-dB-GD1"/>
+                        <outlet property="rangedSlider" destination="gGp-2z-Ypk" id="ALv-qm-IiZ"/>
+                        <outlet property="rangedStackView" destination="S6f-y5-EqG" id="ULz-Gc-mdg"/>
+                        <outlet property="singleButton1" destination="O7H-0t-z29" id="qdG-V6-ey9"/>
+                        <outlet property="singleButton2" destination="Zz0-xF-2NH" id="XZY-S4-PGP"/>
+                        <outlet property="singleButton3" destination="h7o-Sf-Vy7" id="hi8-g5-npW"/>
+                        <outlet property="singleButton4" destination="PPh-TS-OIa" id="33a-oH-MP0"/>
+                        <outlet property="singleStackView" destination="yEH-SZ-VR3" id="JEP-fb-sez"/>
                         <segue destination="6X6-lq-kZg" kind="show" identifier="ResultsSegue" id="Weo-zz-do2"/>
                     </connections>
                 </viewController>
@@ -285,11 +323,11 @@
         <!--Navigation Controller-->
         <scene sceneID="gD3-lM-BGW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="97x-ZR-buF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="97x-ZR-buF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="4g5-3S-DPv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9hA-2E-9ua">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
