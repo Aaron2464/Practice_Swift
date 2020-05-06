@@ -53,7 +53,7 @@
         <!--Edit Todo Item-->
         <scene sceneID="w48-s0-4S7">
             <objects>
-                <viewController id="S9Q-kc-3Uk" sceneMemberID="viewController">
+                <viewController id="S9Q-kc-3Uk" customClass="EditTodoViewController" customModule="SimpleTodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cDa-4r-Ez5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,10 +74,19 @@
                         <viewLayoutGuide key="safeArea" id="FVK-M9-NZF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Todo Item" largeTitleDisplayMode="never" id="5Q0-34-1Da">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="EcW-Z2-cAp"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="EcW-Z2-cAp">
+                            <connections>
+                                <segue destination="1zf-0f-MKZ" kind="unwind" unwindAction="unwindToListViewWithSegue:" id="Ip5-H5-JtA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="wLC-kX-0VA" id="GqB-0U-0Yf"/>
+                        <outlet property="saveButton" destination="EcW-Z2-cAp" id="MaZ-He-dwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNw-OV-8GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1zf-0f-MKZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2643" y="142"/>
         </scene>

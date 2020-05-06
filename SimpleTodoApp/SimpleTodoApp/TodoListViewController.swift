@@ -10,8 +10,11 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
+    var list: [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(list as Any)
     }
     
 // Change header
@@ -19,4 +22,9 @@ class TodoListViewController: UITableViewController {
 //        return "Header \(section)"
 //    }
     
+    @IBAction func unwindToListView(segue: UIStoryboardSegue){
+        if segue.identifier == EditTodoViewController.unwindSegueId {
+
+        }
+    }
 }
