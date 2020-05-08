@@ -29,8 +29,8 @@ class EditTodoViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is TodoListViewController{
-            let vc = segue.destination as? TodoListViewController
-            vc?.list?.append(descriptionTextField.text ?? " ")
+//            let vc = segue.destination as! TodoListViewController
+//            TodoListViewController.list[2].append(descriptionTextField.text ?? "")
         }
     }
 }
