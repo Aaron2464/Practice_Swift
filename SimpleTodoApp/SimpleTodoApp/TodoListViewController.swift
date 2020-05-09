@@ -11,15 +11,12 @@ import UIKit
 class TodoListViewController: UITableViewController {
 
     
-    var list: [[String]] = [["Build up App"], ["Eat dinner"], ["Sleep all night"]]
+    var list: [[String]] = [["Build up App", "Fihish assignment"], ["Eat dinner"], ["Sleep all night"]]
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fullScreenSize = UIScreen.main.bounds.size
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "HighCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MidCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LowCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         tableView.delegate = self
         // 分隔線的樣式
@@ -33,15 +30,18 @@ class TodoListViewController: UITableViewController {
 
         // 是否可以多選 cell
         tableView.allowsMultipleSelection = false
-
     }
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return list.count
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MidCell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         
         if indexPath.section == 0{
             if indexPath.row == 0 {
@@ -63,13 +63,19 @@ class TodoListViewController: UITableViewController {
     }
     
 // Change header
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Header \(section)"
-//    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "High Priority"
+        case 1: return "Medium Priority"
+        case 2: return "Low Priority"
+        default: return nil
+        }
+    }
     
     @IBAction func unwindToListView(segue: UIStoryboardSegue){
         if segue.identifier == EditTodoViewController.unwindSegueId {
 //            print(TodoListViewController.list as Any)
+            tableView.reloadData()
         }
     }
 }
