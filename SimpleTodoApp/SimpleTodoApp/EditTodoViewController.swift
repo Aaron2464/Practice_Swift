@@ -19,7 +19,7 @@ class EditTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     static let unwindSegueId = "saveUnwind"
     let mPickerView = UIPickerView()
-      
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mPickerView.delegate = self
@@ -27,6 +27,11 @@ class EditTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         priorityTextField.text = priority[selectNum]
         priorityTextField.inputView = mPickerView
+        
+        let tap = UITapGestureRecognizer(
+            target: self, action: #selector(hideKeyboard(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     // 1. validate user input
@@ -58,5 +63,9 @@ class EditTodoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectNum = row
         priorityTextField.text = priority[row]
+    }
+    
+    @objc func hideKeyboard(_ tapG:UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
 }
