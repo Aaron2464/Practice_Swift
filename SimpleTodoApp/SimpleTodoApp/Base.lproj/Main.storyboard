@@ -17,10 +17,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nWM-40-nhP">
-                                <rect key="frame" x="0.0" y="28" width="414" height="1.1920928955078125e-07"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nWM-40-nhP" id="hoh-l2-KoK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1.1920928955078125e-07"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -58,18 +58,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-kX-0VA">
-                                <rect key="frame" x="5" y="103" width="404" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Priority" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-Iy-fz7">
+                                <rect key="frame" x="5" y="123" width="404" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Todo List Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-kX-0VA">
+                                <rect key="frame" x="5" y="172" width="404" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wLC-kX-0VA" firstAttribute="leading" secondItem="FVK-M9-NZF" secondAttribute="leading" constant="5" id="MYL-LX-5vv"/>
-                            <constraint firstItem="wLC-kX-0VA" firstAttribute="centerX" secondItem="cDa-4r-Ez5" secondAttribute="centerX" id="XPe-sh-91c"/>
-                            <constraint firstItem="FVK-M9-NZF" firstAttribute="trailing" secondItem="wLC-kX-0VA" secondAttribute="trailing" constant="5" id="ajR-gM-tNU"/>
-                            <constraint firstItem="wLC-kX-0VA" firstAttribute="top" secondItem="FVK-M9-NZF" secondAttribute="top" constant="15" id="nhl-X4-tpS"/>
+                            <constraint firstItem="wLC-kX-0VA" firstAttribute="top" secondItem="PNa-Iy-fz7" secondAttribute="bottom" constant="15" id="7Su-zf-65H"/>
+                            <constraint firstItem="wLC-kX-0VA" firstAttribute="trailing" secondItem="PNa-Iy-fz7" secondAttribute="trailing" id="Bjz-PZ-cSf"/>
+                            <constraint firstItem="PNa-Iy-fz7" firstAttribute="leading" secondItem="FVK-M9-NZF" secondAttribute="leading" constant="5" id="jiK-8I-8b6"/>
+                            <constraint firstItem="wLC-kX-0VA" firstAttribute="leading" secondItem="PNa-Iy-fz7" secondAttribute="leading" id="r7u-a0-iq3"/>
+                            <constraint firstItem="FVK-M9-NZF" firstAttribute="trailing" secondItem="PNa-Iy-fz7" secondAttribute="trailing" constant="5" id="rzs-kO-mFp"/>
+                            <constraint firstItem="PNa-Iy-fz7" firstAttribute="top" secondItem="FVK-M9-NZF" secondAttribute="top" constant="35" id="vNh-OY-GxA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FVK-M9-NZF"/>
                     </view>
@@ -82,13 +89,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="wLC-kX-0VA" id="GqB-0U-0Yf"/>
+                        <outlet property="priorityTextField" destination="PNa-Iy-fz7" id="oHb-ag-wP0"/>
                         <outlet property="saveButton" destination="EcW-Z2-cAp" id="MaZ-He-dwP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNw-OV-8GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1zf-0f-MKZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2643" y="142"/>
+            <point key="canvasLocation" x="2642.0289855072465" y="141.96428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="faq-Js-YbX">
