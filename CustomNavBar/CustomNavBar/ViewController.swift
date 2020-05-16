@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var customNavBar: UIView!
+    @IBOutlet var customNavBarHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +19,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addBtnTapped(_ sender: UIButton) {
-        sender.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        UIView.animate(withDuration: 1.0, animations: {
-            let scaleTransform = CGAffineTransform(scaleX: 1.0, y: 3.0)
-            self.customNavBar.transform = scaleTransform
+        
+        UIView.animate(withDuration: 1.5, animations: {
+            let rotationTransform = CGAffineTransform(rotationAngle: .pi * 0.75 ) // max - .pi
+            sender.transform = rotationTransform
+            self.customNavBarHeight.constant = 200
+            self.view.layoutIfNeeded()
         })
     }
     

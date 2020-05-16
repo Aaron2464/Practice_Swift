@@ -49,6 +49,7 @@
                     </view>
                     <connections>
                         <outlet property="customNavBar" destination="3c3-0y-iBd" id="zNz-9I-TbP"/>
+                        <outlet property="customNavBarHeight" destination="FBH-KY-Y3G" id="USs-5g-x22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
