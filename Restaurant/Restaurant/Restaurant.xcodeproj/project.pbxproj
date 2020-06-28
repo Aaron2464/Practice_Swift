@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8846652478842800A1D7D5 /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8846642478842800A1D7D5 /* IntermediaryModels.swift */; };
+		9D884667247885C700A1D7D5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D884666247885C700A1D7D5 /* Order.swift */; };
+		9D884669247886A300A1D7D5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D884668247886A300A1D7D5 /* MenuController.swift */; };
 		9DDCD2902475C9E100BBF6C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCD28F2475C9E100BBF6C3 /* AppDelegate.swift */; };
 		9DDCD2922475C9E100BBF6C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCD2912475C9E100BBF6C3 /* SceneDelegate.swift */; };
 		9DDCD2942475C9E100BBF6C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDCD2932475C9E100BBF6C3 /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D8846642478842800A1D7D5 /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
+		9D884666247885C700A1D7D5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		9D884668247886A300A1D7D5 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		9DDCD28C2475C9E100BBF6C3 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDCD28F2475C9E100BBF6C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDCD2912475C9E100BBF6C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +77,10 @@
 				9DDCD2932475C9E100BBF6C3 /* ViewController.swift */,
 				9DDCD2952475C9E100BBF6C3 /* Main.storyboard */,
 				9DDCD2AB2475EADB00BBF6C3 /* MenuItem.swift */,
+				9D884668247886A300A1D7D5 /* MenuController.swift */,
 				9DDCD2A92475E9A900BBF6C3 /* MenuItemDetailViewController.swift */,
+				9D8846642478842800A1D7D5 /* IntermediaryModels.swift */,
+				9D884666247885C700A1D7D5 /* Order.swift */,
 				9DDCD2A32475E2FF00BBF6C3 /* CategoryTableViewController.swift */,
 				9DDCD2A52475E32700BBF6C3 /* MenuTableViewController.swift */,
 				9DDCD2A72475E34200BBF6C3 /* OrderTableViewController.swift */,
@@ -155,9 +164,12 @@
 			files = (
 				9DDCD2942475C9E100BBF6C3 /* ViewController.swift in Sources */,
 				9DDCD2902475C9E100BBF6C3 /* AppDelegate.swift in Sources */,
+				9D884667247885C700A1D7D5 /* Order.swift in Sources */,
 				9DDCD2A62475E32700BBF6C3 /* MenuTableViewController.swift in Sources */,
 				9DDCD2AA2475E9A900BBF6C3 /* MenuItemDetailViewController.swift in Sources */,
+				9D884669247886A300A1D7D5 /* MenuController.swift in Sources */,
 				9DDCD2922475C9E100BBF6C3 /* SceneDelegate.swift in Sources */,
+				9D8846652478842800A1D7D5 /* IntermediaryModels.swift in Sources */,
 				9DDCD2AC2475EADB00BBF6C3 /* MenuItem.swift in Sources */,
 				9DDCD2A82475E34200BBF6C3 /* OrderTableViewController.swift in Sources */,
 				9DDCD2A42475E2FF00BBF6C3 /* CategoryTableViewController.swift in Sources */,
